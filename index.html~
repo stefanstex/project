@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#button").click(function(){
+					for(var i = 0;i<50;i++){ // move down and move right 1 pixel at a time to get effect
+					 $("#box1").animate({"margin-left": "+=1px"}, 10); 
+					 $("#box1").animate({"margin-top": "+=1px"}, 10); 
+} 
+				});		
+				$("#hide").click(function(){
+					$(".right").animate({"width": "-=33%", "height": "-=100%"}, 2000);
+				});	
+				$("#show").click(function(){
+					$(".right").animate({"width": "+=33%", "height": "+=100%"}, 2000);
+				});
+			});
+		</script>
+		<style>
+			.left, .right{ width:33%; height:100%; float:left; background-color:green; }
+			.center{ width:33%; height:100%; float:left; }
+			.box{ width:150px; height:150px; margin:20px; background-color:red; position:absolute;}
+			.box2{ width:150px; height:150px; margin:20px; background-color:blue; position:absolute;}
+		</style>
+	</head>
+	<body>
+		<div class="all">
+			<div class="left">
+				<div class="box" id="box1"></div>
+			</div>
+			<div class="center">
+				<input type="button" id="button" value="Animate" /><br/ >
+				<input type="button" id="hide" value="Hide" /><br/ >
+				<input type="button" id="show" value="Show" /><br/ >
+			</div>
+			<div class="right">
+				<div class="box2" id="box2">Hello world</div>
+			</div>
+		</div>
+	</body>
+</html>
