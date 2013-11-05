@@ -35,7 +35,7 @@
 				<input type="button" id="show" value="Show" /><br/ >
 			</div>
 			<div class="right">
-				<div class="box2" id="box2">Hello world</div>
+				<div class="box2" id="box2">Hello world !!!</div>
 			</div>
 		</div>
 	</body>
